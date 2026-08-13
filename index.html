@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,6 +18,7 @@ body{
   background:#090909;
   color:#fff;
   min-height:100vh;
+  padding-bottom:150px;
 }
 
 header{
@@ -99,11 +100,6 @@ header{
   background:#181818;
   border:1px solid #292929;
   text-align:center;
-  cursor:pointer;
-}
-
-.category:hover{
-  background:#252525;
 }
 
 .category .icon{
@@ -166,6 +162,21 @@ header{
   color:#fff;
   font-size:17px;
   cursor:pointer;
+}
+
+.youtube{
+  width:100%;
+  aspect-ratio:16/9;
+  border-radius:15px;
+  overflow:hidden;
+  background:#111;
+  margin-top:15px;
+}
+
+.youtube iframe{
+  width:100%;
+  height:100%;
+  border:0;
 }
 
 .player{
@@ -235,23 +246,8 @@ header{
   background:#ff1744;
 }
 
-.youtube{
-  width:100%;
-  aspect-ratio:16/9;
-  border-radius:15px;
-  overflow:hidden;
-  background:#111;
-  margin-top:15px;
-}
-
-.youtube iframe{
-  width:100%;
-  height:100%;
-  border:0;
-}
-
 footer{
-  padding:35px 20px 130px;
+  padding:35px 20px;
   text-align:center;
   color:#777;
 }
@@ -267,6 +263,7 @@ footer{
 }
 
 @media(min-width:700px){
+
   .hero,
   .section{
     max-width:900px;
@@ -277,6 +274,7 @@ footer{
     display:grid;
     grid-template-columns:1fr 1fr;
   }
+
 }
 </style>
 </head>
@@ -284,33 +282,43 @@ footer{
 <body>
 
 <header>
-  <div class="logo">S MY <span>MUSIC</span></div>
+
+  <div class="logo">
+    S MY <span>MUSIC</span>
+  </div>
+
   <div class="menu">☰</div>
+
 </header>
+
 
 <section class="hero">
 
   <h1>Welcome to S My Music 🎵</h1>
 
   <p>
-    Your music destination for original songs,
-    artists, videos and retro music.
+    आपके पसंदीदा गाने, ओरिजिनल म्यूजिक,
+    वीडियो और प्लेलिस्ट एक ही जगह।
   </p>
 
   <div class="search">
+
     <input
       type="text"
       id="searchBox"
-      placeholder="🔎 Search songs or artists..."
-      onkeyup="searchSongs()"
-    >
+      placeholder="🔎 गाना खोजें..."
+      onkeyup="searchSongs()">
+
   </div>
 
 </section>
 
+
 <section class="section">
 
-  <h2 class="section-title">Music Categories</h2>
+  <h2 class="section-title">
+    Music Categories
+  </h2>
 
   <div class="categories">
 
@@ -321,7 +329,7 @@ footer{
 
     <div class="category">
       <div class="icon">📻</div>
-      Retro Radio
+      Playlist
     </div>
 
     <div class="category">
@@ -338,75 +346,306 @@ footer{
 
 </section>
 
+
+<!-- ========================= -->
+<!-- आपके 9 गाने -->
+<!-- ========================= -->
+
 <section class="section">
 
-  <h2 class="section-title">S My Music Originals</h2>
+  <h2 class="section-title">
+    🎵 S My Music Songs
+  </h2>
 
   <div class="song-list" id="songList">
 
-    <!--
-    IMPORTANT:
-    नीचे YOUR_VIDEO_ID को अपने YouTube video ID से बदलना है।
-    -->
 
-    <div class="song"
-         data-name="S My Music Original">
+    <div class="song" data-name="S My Music Song 1">
 
       <div class="cover">🎵</div>
 
       <div class="song-info">
-        <h3>S My Music Original</h3>
+
+        <h3>S My Music Song 1</h3>
+
         <p>S My Music</p>
+
       </div>
 
       <button
         class="play-btn"
-        onclick="playSong('YOUR_VIDEO_ID','S My Music Original','S My Music')">
+        onclick="playSong(
+          'uRK6tEMZtQY',
+          'S My Music Song 1',
+          'S My Music'
+        )">
+
         ▶
+
       </button>
 
     </div>
 
 
-    <div class="song"
-         data-name="New Music">
+    <div class="song" data-name="S My Music Song 2">
 
       <div class="cover">🎶</div>
 
       <div class="song-info">
-        <h3>New Music</h3>
+
+        <h3>S My Music Song 2</h3>
+
         <p>S My Music</p>
+
       </div>
 
       <button
         class="play-btn"
-        onclick="playSong('YOUR_VIDEO_ID','New Music','S My Music')">
+        onclick="playSong(
+          '-MnTS9__BfY',
+          'S My Music Song 2',
+          'S My Music'
+        )">
+
         ▶
+
       </button>
 
     </div>
+
+
+    <div class="song" data-name="S My Music Song 3">
+
+      <div class="cover">🎵</div>
+
+      <div class="song-info">
+
+        <h3>S My Music Song 3</h3>
+
+        <p>S My Music</p>
+
+      </div>
+
+      <button
+        class="play-btn"
+        onclick="playSong(
+          'TbhuSB_02b0',
+          'S My Music Song 3',
+          'S My Music'
+        )">
+
+        ▶
+
+      </button>
+
+    </div>
+
+
+    <div class="song" data-name="S My Music Song 4">
+
+      <div class="cover">🎶</div>
+
+      <div class="song-info">
+
+        <h3>S My Music Song 4</h3>
+
+        <p>S My Music</p>
+
+      </div>
+
+      <button
+        class="play-btn"
+        onclick="playSong(
+          'Iflb0EsymaI',
+          'S My Music Song 4',
+          'S My Music'
+        )">
+
+        ▶
+
+      </button>
+
+    </div>
+
+
+    <div class="song" data-name="S My Music Song 5">
+
+      <div class="cover">🎵</div>
+
+      <div class="song-info">
+
+        <h3>S My Music Song 5</h3>
+
+        <p>S My Music</p>
+
+      </div>
+
+      <button
+        class="play-btn"
+        onclick="playSong(
+          'UcPu926a1Ow',
+          'S My Music Song 5',
+          'S My Music'
+        )">
+
+        ▶
+
+      </button>
+
+    </div>
+
+
+    <div class="song" data-name="S My Music Song 6">
+
+      <div class="cover">🎶</div>
+
+      <div class="song-info">
+
+        <h3>S My Music Song 6</h3>
+
+        <p>S My Music</p>
+
+      </div>
+
+      <button
+        class="play-btn"
+        onclick="playSong(
+          'OxOTDSqBeVU',
+          'S My Music Song 6',
+          'S My Music'
+        )">
+
+        ▶
+
+      </button>
+
+    </div>
+
+
+    <div class="song" data-name="S My Music Song 7">
+
+      <div class="cover">🎵</div>
+
+      <div class="song-info">
+
+        <h3>S My Music Song 7</h3>
+
+        <p>S My Music</p>
+
+      </div>
+
+      <button
+        class="play-btn"
+        onclick="playSong(
+          'xfp01NsSuLc',
+          'S My Music Song 7',
+          'S My Music'
+        )">
+
+        ▶
+
+      </button>
+
+    </div>
+
+
+    <div class="song" data-name="S My Music Song 8">
+
+      <div class="cover">🎶</div>
+
+      <div class="song-info">
+
+        <h3>S My Music Song 8</h3>
+
+        <p>S My Music</p>
+
+      </div>
+
+      <button
+        class="play-btn"
+        onclick="playSong(
+          'pUbyhyqImAM',
+          'S My Music Song 8',
+          'S My Music'
+        )">
+
+        ▶
+
+      </button>
+
+    </div>
+
+
+    <div class="song" data-name="S My Music Song 9">
+
+      <div class="cover">🎵</div>
+
+      <div class="song-info">
+
+        <h3>S My Music Song 9</h3>
+
+        <p>S My Music</p>
+
+      </div>
+
+      <button
+        class="play-btn"
+        onclick="playSong(
+          'JA2bM5E7s8Y',
+          'S My Music Song 9',
+          'S My Music'
+        )">
+
+        ▶
+
+      </button>
+
+    </div>
+
 
   </div>
 
 </section>
 
 
+<!-- ========================= -->
+<!-- आपकी YouTube Playlist -->
+<!-- ========================= -->
+
 <section class="section">
 
-  <h2 class="section-title">📻 Retro Music</h2>
+  <h2 class="section-title">
+    📻 S My Music Playlist
+  </h2>
 
   <p style="color:#999;line-height:1.6;">
-    Retro-style and legally usable music will be added here.
-    We will not upload copyrighted Bollywood recordings
-    without the required permission.
+
+    हमारी पूरी YouTube Playlist यहाँ सुनें।
+
   </p>
+
+  <div class="youtube">
+
+    <iframe
+      src="https://www.youtube.com/embed/videoseries?list=PLRbdu_JZxJD0"
+      allow="autoplay; encrypted-media"
+      allowfullscreen>
+    </iframe>
+
+  </div>
 
 </section>
 
 
+<!-- ========================= -->
+<!-- YouTube Player -->
+<!-- ========================= -->
+
 <section class="section">
 
-  <h2 class="section-title">▶️ YouTube Music Player</h2>
+  <h2 class="section-title">
+    ▶️ YouTube Music Player
+  </h2>
 
   <div class="youtube">
 
@@ -422,12 +661,20 @@ footer{
 </section>
 
 
+<!-- ========================= -->
+<!-- YouTube Channel -->
+<!-- ========================= -->
+
 <section class="section">
 
-  <h2 class="section-title">S My Music on YouTube</h2>
+  <h2 class="section-title">
+    S My Music on YouTube
+  </h2>
 
   <p style="color:#aaa;line-height:1.6;">
-    Watch our latest music videos and original songs.
+
+    हमारे नए गाने और म्यूजिक वीडियो YouTube पर देखें।
+
   </p>
 
   <br>
@@ -444,7 +691,9 @@ footer{
       text-decoration:none;
       font-weight:bold;
     ">
-    ▶ Visit YouTube Channel
+
+    ▶ YouTube Channel
+
   </a>
 
 </section>
@@ -452,12 +701,18 @@ footer{
 
 <footer>
 
-  <div>© 2026 S My Music</div>
+  <div>
+    © 2026 S My Music
+  </div>
 
   <div class="social">
 
-    <a href="https://youtube.com/@assmymusic" target="_blank">
+    <a
+      href="https://youtube.com/@assmymusic"
+      target="_blank">
+
       YouTube
+
     </a>
 
   </div>
@@ -465,16 +720,22 @@ footer{
 </footer>
 
 
+<!-- ========================= -->
+<!-- नीचे वाला Player -->
+<!-- ========================= -->
+
 <div class="player">
 
   <div class="now-playing">
 
-    <div class="now-cover">🎵</div>
+    <div class="now-cover">
+      🎵
+    </div>
 
     <div class="now-info">
 
       <strong id="nowTitle">
-        Select a song
+        कोई गाना चुनें
       </strong>
 
       <small id="nowArtist">
@@ -485,13 +746,25 @@ footer{
 
   </div>
 
+
   <div class="controls">
 
-    <button onclick="previousSong()">⏮</button>
+    <button onclick="previousSong()">
+      ⏮
+    </button>
 
-    <button class="main" onclick="togglePlayer()">▶</button>
+    <button
+      class="main"
+      onclick="togglePlayer()"
+      id="mainPlayButton">
 
-    <button onclick="nextSong()">⏭</button>
+      ▶
+
+    </button>
+
+    <button onclick="nextSong()">
+      ⏭
+    </button>
 
   </div>
 
@@ -500,23 +773,81 @@ footer{
 
 <script>
 
-let currentVideo = "";
+/* =========================
+   आपके 9 गानों की सूची
+========================= */
 
-let songs = [];
+const songs = [
+
+  {
+    id:"uRK6tEMZtQY",
+    title:"S My Music Song 1",
+    artist:"S My Music"
+  },
+
+  {
+    id:"-MnTS9__BfY",
+    title:"S My Music Song 2",
+    artist:"S My Music"
+  },
+
+  {
+    id:"TbhuSB_02b0",
+    title:"S My Music Song 3",
+    artist:"S My Music"
+  },
+
+  {
+    id:"Iflb0EsymaI",
+    title:"S My Music Song 4",
+    artist:"S My Music"
+  },
+
+  {
+    id:"UcPu926a1Ow",
+    title:"S My Music Song 5",
+    artist:"S My Music"
+  },
+
+  {
+    id:"OxOTDSqBeVU",
+    title:"S My Music Song 6",
+    artist:"S My Music"
+  },
+
+  {
+    id:"xfp01NsSuLc",
+    title:"S My Music Song 7",
+    artist:"S My Music"
+  },
+
+  {
+    id:"pUbyhyqImAM",
+    title:"S My Music Song 8",
+    artist:"S My Music"
+  },
+
+  {
+    id:"JA2bM5E7s8Y",
+    title:"S My Music Song 9",
+    artist:"S My Music"
+  }
+
+];
+
 
 let currentIndex = 0;
 
+let currentVideo = "";
 
-function playSong(videoId, title, artist){
+let isPlaying = false;
 
-  if(videoId === "YOUR_VIDEO_ID"){
 
-    alert(
-      "पहले इस song में अपना YouTube Video ID डालें।"
-    );
+/* =========================
+   गाना चलाएँ
+========================= */
 
-    return;
-  }
+function playSong(videoId,title,artist){
 
   currentVideo = videoId;
 
@@ -529,59 +860,148 @@ function playSong(videoId, title, artist){
     videoId +
     "?autoplay=1&rel=0";
 
+  isPlaying = true;
+
+  document.getElementById("mainPlayButton").innerText = "⏸";
+
+
+  currentIndex =
+    songs.findIndex(function(song){
+
+      return song.id === videoId;
+
+    });
+
 }
 
+
+/* =========================
+   Play / Pause
+========================= */
 
 function togglePlayer(){
 
   if(currentVideo === ""){
 
-    alert("पहले कोई song select करें।");
+    playSong(
+      songs[0].id,
+      songs[0].title,
+      songs[0].artist
+    );
 
     return;
+
+  }
+
+  if(isPlaying){
+
+    document.getElementById("youtubePlayer").src =
+      "https://www.youtube.com/embed/" +
+      currentVideo +
+      "?autoplay=0&rel=0";
+
+    isPlaying = false;
+
+    document.getElementById("mainPlayButton").innerText = "▶";
+
+  }else{
+
+    document.getElementById("youtubePlayer").src =
+      "https://www.youtube.com/embed/" +
+      currentVideo +
+      "?autoplay=1&rel=0";
+
+    isPlaying = true;
+
+    document.getElementById("mainPlayButton").innerText = "⏸";
 
   }
 
 }
 
 
+/* =========================
+   अगला गाना
+========================= */
+
 function nextSong(){
 
-  alert("Next song system जल्द activate किया जाएगा।");
+  currentIndex++;
+
+  if(currentIndex >= songs.length){
+
+    currentIndex = 0;
+
+  }
+
+  const song = songs[currentIndex];
+
+  playSong(
+    song.id,
+    song.title,
+    song.artist
+  );
 
 }
 
+
+/* =========================
+   पिछला गाना
+========================= */
 
 function previousSong(){
 
-  alert("Previous song system जल्द activate किया जाएगा।");
+  currentIndex--;
+
+  if(currentIndex < 0){
+
+    currentIndex = songs.length - 1;
+
+  }
+
+  const song = songs[currentIndex];
+
+  playSong(
+    song.id,
+    song.title,
+    song.artist
+  );
 
 }
 
 
+/* =========================
+   Search
+========================= */
+
 function searchSongs(){
 
-  let input =
+  const input =
     document
     .getElementById("searchBox")
     .value
     .toLowerCase();
 
-  let allSongs =
+  const allSongs =
     document.querySelectorAll(".song");
+
 
   allSongs.forEach(function(song){
 
-    let name =
-      song.dataset.name.toLowerCase();
+    const name =
+      song
+      .dataset
+      .name
+      .toLowerCase();
+
 
     if(name.includes(input)){
 
-      song.style.display="flex";
+      song.style.display = "flex";
 
     }else{
 
-      song.style.display="none";
+      song.style.display = "none";
 
     }
 
@@ -592,4 +1012,4 @@ function searchSongs(){
 </script>
 
 </body>
-  </html>
+</html>
